@@ -1,0 +1,26 @@
+<section class='container grid grid-rows-7 grid-cols-1 items-center gap-2 max-w-sm mx-auto pb-5 '>
+  <img class="object-center -z-0" src="../../../assets/images/auth-header1.png " alt="">
+  <div class="flex max-w-xs items-center justify-center py-2 px-2 mx-auto">
+    <div class="content-box-nav">
+      <div class="tab-list flex">
+        <button [ngClass]="(registerMode ? 'selected' : '') " role="tab" (click)="changeMode()">ورود</button>
+        <button [ngClass]="(registerMode ? '' : 'selected')" role="tab" (click)="changeMode()">ثبت نام</button>
+      </div>
+    </div>
+  </div>
+  <h6 class='text-center text-slate-400 text-xs font-medium mt-3'>لطفا شماره موبایل خود را وارد کنید</h6>
+  <div class="mx-8 items-center">
+    <app-mobileinput class="" (mobileInput)="InphoneNumber($event)"></app-mobileinput>
+  </div>
+  <div class="mx-auto -mt-5 grid grid-cols-2 gap-4 items-center justify-center">
+    <div class="ml-3 text-sm font-medium text-slate-400 dark:text-gray-300 h-8"> پزشک </div>
+    <app-switch (outPutRigsterMod)="InActiveDr($event)"></app-switch>
+    
+  </div>
+
+  <button class="btn-tab" [ngClass]="(mobileIsOk ? '':'disabled') " (click)="sendVerifcationCode()">دریافت رمز یکبار
+    مصرف</button>
+
+</section>
+
+

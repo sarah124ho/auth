@@ -1,0 +1,34 @@
+
+.tab-list button {
+    @apply rounded-full text-center object-contain border-slate-300 bg-blue-50  w-full max-w-xs rounded-full w-40 h-10 ;
+    @apply text-slate-500 hover:text-indigo-500 text-xl font-bold;
+    @apply dark:bg-slate-800 ; 
+}
+.content-box-nav{
+  @apply bg-blue-50 max-w-xs mx-auto  rounded-full py-1 px-1;
+  @apply dark:bg-slate-800 dark:ring-1 dark:ring-slate-700;
+}
+
+.tab-list button.selected {
+    @apply bg-indigo-500 text-white shadow-md shadow-indigo-500/20;
+    @apply  text-white dark:bg-slate-900 dark:text-slate-200 dark:shadow-sm dark:shadow-black ;
+  } 
+
+.btn-tab {
+    @apply bg-green-500  rounded-full text-white font-bold from-green-50 text-center py-2.5 ;
+    @apply hover:shadow-lg hover:shadow-green-500/50 transition-all text-xl;
+    @apply dark:shadow-black dark:hover:shadow-sm dark:hover:shadow-indigo-500;
+    @apply dark:bg-slate-900 dark:ring-1 dark:ring-slate-700 mx-8;
+    
+
+  }
+
+.btn-tab.disabled{
+  @apply opacity-25 bg-green-500 pointer-events-none mx-8 ;
+  @apply dark:opacity-25 dark:bg-slate-800 
+
+}
+.mobileInput{
+  @apply flex flex-col mt-5 max-w-xs  pt-1 mx-auto space-y-4 pb-16
+}  
+  
